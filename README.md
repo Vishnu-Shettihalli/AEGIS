@@ -171,7 +171,7 @@ This enables **bank analysts to understand risks instantly without manual analys
 ### Clone the repository
 
 
-git clone https://github.com/PRANAVSP30/AEGIS_AI_Security
+git clone https://github.com/Vishnu-Shettihalli/AEGIS.git
 
 cd AEGIS
 
