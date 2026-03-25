@@ -1,0 +1,28 @@
+body {
+background-color:#0B0F19;
+color:#E6EDF3;
+}
+
+.metric-card{
+background:#161B22;
+padding:20px;
+border-radius:10px;
+border:1px solid #30363D;
+}
+
+.ai-panel{
+background:#161B22;
+padding:25px;
+border-left:6px solid #00FFC6;
+border-radius:8px;
+}
+
+.section-title{
+color:#00FFC6;
+font-weight:600;
+}
+
+button[kind="primary"]{
+background:#00FFC6;
+color:black;
+}

@@ -1,0 +1,25 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+
+def fraud_detection(df):
+
+    df_model = df.copy()
+
+    df_model["gender"] = df_model["gender"].astype("category").cat.codes
+    df_model["category"] = df_model["category"].astype("category").cat.codes
+
+    X = df_model[["amount", "gender", "category"]]
+    y = df_model["fraud"]
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
+
+    model = RandomForestClassifier()
+
+    model.fit(X_train, y_train)
+
+    fraud_probability = model.predict_proba(X_test)[:,1].mean()
+
+    return fraud_probability
